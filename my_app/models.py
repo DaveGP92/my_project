@@ -1,7 +1,21 @@
 from django.db import models
 from datetime import datetime
 
+
+class Type(models.Model):
+    name = models.CharField(max_length=100, null=False, blank=False)
+
+    def __str__(self):
+        return self.name
+    
+    class Meta():
+        db_table = 'types'
+        verbose_name = 'Type'
+        verbose_name_plural = 'Types'
+
+
 class Employee(models.Model):
+    type_id = models.ForeignKey(Type, on_delete=models.CASCADE, null=True, blank=False, db_column='type_id')
     name = models.CharField(max_length=100, null=False)
     dni = models.CharField(max_length=10, unique=True)
     date_joined = models.DateField(default=datetime.now)
