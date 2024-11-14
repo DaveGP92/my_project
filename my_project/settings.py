@@ -81,7 +81,7 @@ DATABASES = {
         'USER': 'dave',
         'PASSWORD': 'dave_password',
         'HOST': 'db',  # El nombre del servicio de MySQL en Docker
-        'PORT': '3307',
+        'PORT': '3306',
     }
 }
 

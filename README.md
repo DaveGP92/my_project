@@ -2,14 +2,7 @@ Permisos -> sudo chown -R dave /home/dave/Escritorio/Programación/Django/my_pro
 
 Pasos para iniciar
 - Iniciar el proyecto -> docker-compose run web django-admin startproject my_project .
-- Configurar el settings:
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bd_dave',  nombre de bd
-        'USER': 'dave',
-        'PASSWORD': 'dave_password',
-        'HOST': 'db',  El nombre del servicio de MySQL en Docker
-        'PORT': '3306',
-    }
-}
+
+Utils
+
+- date_time_models.py -> contiene los campos created_at, updated_at y deleted_at nota: abstract = True
