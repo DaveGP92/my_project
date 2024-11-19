@@ -11,7 +11,7 @@ class Customer(TimeFieldModel):
     name = models.CharField(max_length=50, null=False, blank=False)
     surname = models.CharField(max_length=50)
     dni = models.CharField(max_length=10, unique=True, null=False, blank=False)
-    birthdate =  models.DateField()
+    birthdate =  models.DateField(null=True, blank=True)
     address = models.CharField(max_length=50)
     genre = models.CharField(max_length=1, choices=genre_choices)
 
