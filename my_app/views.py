@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
+from . models import Customer
 def first_view(request):
-    return HttpResponse('This is my first view')
+    data = {
+        'customers':Customer.objects.all()
+    }
+    return render(request, 'index.html', data)
