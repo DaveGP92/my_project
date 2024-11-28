@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %} 
     {% for customer in customers %}
-        <h1>{{ customer.name }} {{ customer.surname }}</h1>
-        <p>{{ customer.address }}</p>
-        
+    <div class="text-center gap-3">
+        <h1 class="text-3xl font-bold text-red-700">{{ customer.name }}</h1>
+        <p>Hola, {{ customer.name }} {{ customer.surname }}</p>
+    </div>
     {% endfor %}
-</body>
-</html>
+{% endblock %}
