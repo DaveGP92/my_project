@@ -7,4 +7,4 @@ class TimeFieldModel(models.Model):
 
     class Meta:
         abstract = True
-        app_label = 'my_app'
+        app_label = 'users'
